@@ -1,8 +1,10 @@
 import Image from "next/image";
-// import Navbar from "@/Components/Navbar";
+import HeroBanner from "@/HomeComponent/Hero.Banner";
 export default function Home() {
   return (
   <>
+  <HeroBanner/>
+   {/* <HeroBanner/> */}
   </>
   );
 }
