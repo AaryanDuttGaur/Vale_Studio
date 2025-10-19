@@ -53,27 +53,27 @@ export default function Navbar() {
   return (
     <>
       {/* HEADER */}
-      <header className="flex w-full justify-between h-20 items-center p-3 relative bg-gradient-to-r from-[#D27DF3] to-[#7952ED]">
+      <header className="flex w-full justify-between h-20 items-center p-3 relative ">
         <div
-          className={`${Brico.className} font-semibold text-[1.8rem] text-[#39322D]`}
+          className={`${Brico.className} font-semibold text-[1.8rem] text-white`}
         >
           Vale Studio
         </div>
 
         {/* DESKTOP NAV */}
-        <nav className="hidden md:flex bg-black p-2">
+        <nav className="hidden md:flex bg-[#1E1C1C] p-2">
           <ul className="flex gap-10">
-            <li className={`${Space.className} p-2  cursor-pointer text-white hover:bg-[#39322D] hover:text-[#E9E1D0] transition-all`}>
+            <li className={`${Space.className} p-2  cursor-pointer text-white hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] hover:text-black transition-all`}>
               Home
             </li>
-            <li className={`${Space.className} p-2 hover:bg-[#39322D] text-white hover:text-[#E9E1D0] transition-all cursor-pointer`}>
+            <li className={`${Space.className} p-2 hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white hover:text-black transition-all cursor-pointer`}>
               About
             </li>
-            <li className={`${Space.className} p-2 hover:bg-[#39322D] text-white hover:text-[#E9E1D0] transition-all cursor-pointer`}>
+            <li className={`${Space.className} p-2 hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white hover:text-black transition-all cursor-pointer`}>
               Portfolio
             </li>
             <li
-              className={`${Space.className} p-2 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-[#39322D]  hover:bg-[#7952ED] hover:text-[#E9E1D0] cursor-pointer`}
+              className={`${Space.className} p-2 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-[#39322D]  hover:bg-[#7952ED] hover:text-white cursor-pointer`}
             >
               Contact
             </li>
@@ -82,7 +82,7 @@ export default function Navbar() {
 
         {/* HAMBURGER MENU (MOBILE) */}
         <div
-          className="md:hidden flex flex-col justify-between w-10 h-7  bg-black p-2 rounded-[3px] cursor-pointer shadow-sm"
+          className="md:hidden flex flex-col justify-between w-10 h-7  bg-[#1E1C1C] p-2 rounded-[3px] cursor-pointer shadow-sm"
           onClick={toggle}
         >
           <span ref={boxRef1} className="block h-0.5 bg-white rounded"></span>
@@ -94,7 +94,7 @@ export default function Navbar() {
       {/* MOBILE DROPDOWN MENU */}
       <nav
         ref={navtoggle}
-        className="absolute top-20 w-full bg-black overflow-hidden md:hidden z-40 shadow-md"
+        className="absolute top-20 w-full bg-[#1E1C1C] overflow-hidden md:hidden z-40 shadow-md"
         style={{ height: 0 }}
       >
         <ul className="flex flex-col items-center gap-10 py-6">
