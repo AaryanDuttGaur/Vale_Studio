@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Space_Grotesk, Bricolage_Grotesque } from "next/font/google";
-
+import Link from "next/link";
 const Space = Space_Grotesk({ subsets: ['latin'] });
 const Brico = Bricolage_Grotesque({ subsets: ['latin'] });
 
@@ -54,35 +54,37 @@ export default function Navbar() {
     <>
       {/* HEADER */}
       <header className="flex w-full justify-between h-20 items-center p-3 relative ">
-        <div
-          className={`${Brico.className} font-semibold text-[1.8rem] text-white`}
-        >
-          Vale Studio
-        </div>
+        <Link href="/">
+          <div
+            className={`${Brico.className} font-semibold text-[1.8rem] text-white cursor-pointer`}
+          >
+            Vale Studio
+          </div>
+        </Link>
 
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex bg-[#1E1C1C] p-2">
           <ul className="flex gap-10">
-            <li className={`${Space.className} p-2  cursor-pointer text-white hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] hover:text-black transition-all`}>
-              Home
+            <li className={`${Space.className} p-2 cursor-pointer text-white hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] hover:text-black transition-all`}>
+              <Link href="/">Home</Link>
             </li>
             <li className={`${Space.className} p-2 hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white hover:text-black transition-all cursor-pointer`}>
-              About
+              <Link href="/About">About</Link>
             </li>
             <li className={`${Space.className} p-2 hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white hover:text-black transition-all cursor-pointer`}>
-              Portfolio
+              <Link href="/Portfolio">Portfolio</Link>
             </li>
             <li
-              className={`${Space.className} p-2 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-[#39322D]  hover:bg-[#7952ED] hover:text-white cursor-pointer`}
+              className={`${Space.className} p-2 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-[#39322D] hover:bg-[#7952ED] hover:text-white cursor-pointer`}
             >
-              Contact
+              <Link href="/Contact">Contact</Link>
             </li>
           </ul>
         </nav>
 
         {/* HAMBURGER MENU (MOBILE) */}
         <div
-          className="md:hidden flex flex-col justify-between w-10 h-7  bg-[#1E1C1C] p-2 rounded-[3px] cursor-pointer shadow-sm"
+          className="md:hidden flex flex-col justify-between w-10 h-7 bg-[#1E1C1C] p-2 rounded-[3px] cursor-pointer shadow-sm"
           onClick={toggle}
         >
           <span ref={boxRef1} className="block h-0.5 bg-white rounded"></span>
@@ -101,22 +103,22 @@ export default function Navbar() {
           <li
             className={`${Space.className} font-medium p-2 w-full text-white text-center hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] hover:text-black transition-all cursor-pointer`}
           >
-            Home
+            <Link href="/">Home</Link>
           </li>
           <li
             className={`${Space.className} font-medium p-2 w-full text-white text-center hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] hover:text-black transition-all cursor-pointer`}
           >
-            About
+            <Link href="/About">About</Link>
           </li>
           <li
             className={`${Space.className} font-medium p-2 w-full text-white text-center hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] hover:text-black transition-all cursor-pointer`}
           >
-            Portfolio
+            <Link href="/Portfolio">Portfolio</Link>
           </li>
           <li
-            className={`${Space.className} p-2 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white w-full text-center  hover:text-black font-medium transition-all cursor-pointer`}
+            className={`${Space.className} p-2 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white w-full text-center hover:text-black font-medium transition-all cursor-pointer`}
           >
-            Contact
+            <Link href="/Contact">Contact</Link>
           </li>
         </ul>
       </nav>

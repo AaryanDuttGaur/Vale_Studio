@@ -1,60 +1,101 @@
 "use client";
 import { Space_Grotesk, Bricolage_Grotesque, Inter } from "next/font/google";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Space = Space_Grotesk({ subsets: ["latin"] });
 const Brico = Bricolage_Grotesque({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
-gsap.registerPlugin(ScrollTrigger)
-
 export default function Cta() {
-    const boxref1 = useRef(null)
+  const boxref1 = useRef(null);
+  const headingRef = useRef(null);
+  const textRef = useRef(null);
+  const buttonRef = useRef(null);
 
-    useEffect(() => {
-        gsap.fromTo(boxref1.current, {
-            opacity: 0,
-            y: -10,
-        }, {
-            opacity: 1,
-            y: 0,
-            duration:2,
-            ease:"power2.out",
-            scrollTrigger:{
-                trigger:boxref1.current,
-                start:'top 80%',
-                toggleActions:"play none none none "
-            }
-        });
-    }, [])
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: boxref1.current,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
 
+    tl.from(headingRef.current, {
+      opacity: 0,
+      y: -50,
+      duration: 1,
+      ease: "power2.out",
+    })
+      .from(
+        textRef.current,
+        {
+          opacity: 0,
+          y: -30,
+          duration: 1,
+          ease: "power2.out",
+        },
+        "-=0.5"
+      )
+      .from(
+        buttonRef.current,
+        {
+          opacity: 0,
+          y: 20,
+          duration: 0.8,
+          ease: "power2.out",
+        },
+        "-=0.5"
+      );
+    gsap.to(boxref1.current.parentElement, {
+      yPercent: -10,
+      ease: "none",
+      scrollTrigger: {
+        trigger: boxref1.current.parentElement,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, []);
 
-
-    return (
-        <>
-        <div className="bg-gradient-to-b from-[#181717] to-[#0F0F0F] relative z-60 -mt-20">
-            <div className="mainbox h-[50vh] p-10 m-10  bg-gradient-to-r from-[#D27DF3] to-[#7952ED] flex justify-center items-center rounded-2xl ">
-                <div ref={boxref1} className="innerbox flex flex-col justify-stretch gap-5">
-                    <div className="Headings">
-                        <h1 className={`${Space.className} text-white text-2xl md:text-4xl font-bold leading-tight drop-shadow-lg mt-2`}>Lets bring Your ideas to <span className="text-black text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg"> Life </span></h1>
-                        <div className="w-20 h-1 bg-white mb-8"></div>
-                    </div>
-                    <div className={`${inter.className} text-white  text-[10px] md:text-[20px] font-extralight leading-tight drop-shadow-lg`}>Ready to turn your vision into reality? Whether it’s a website, app, or a full digital experience, I’m here to help you craft something amazing.
-                        <br />
-                        <br />
-                        <span className="text-black">
-                            Get in touch today and let’s start building your project together.
-                        </span>
-                    </div>
-                    <div>
-                        <button className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-10 mb-5`}>
-                            know more
-                        </button>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="bg-gradient-to-b from-[#181717] to-[#0F0F0F] relative z-60 -mt-20">
+      <div className="mainbox h-[60vh] p-10 m-10 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] flex justify-center items-center rounded-2xl overflow-hidden">
+        <div ref={boxref1} className="innerbox flex flex-col justify-stretch gap-5 ">
+          <div className="Headings" ref={headingRef}>
+            <h1
+              className={`${Space.className} text-white text-3xl md:text-5xl font-bold leading-tight drop-shadow-lg`}
+            >
+              Lets bring Your ideas to{" "}
+              <span className="text-black text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">
+                Life
+              </span>
+            </h1>
+            <div className="w-20 h-1 bg-white "></div>
+          </div>
+          <div
+            ref={textRef}
+            className={`${inter.className} text-white text-sm md:text-lg font-extralight leading-snug drop-shadow-lg`}
+          >
+            Ready to turn your vision into reality? Whether it’s a website, app, or a full digital experience, I’m here to help you craft something amazing.
+            <br />
+            <br />
+            <span className="text-black">
+              Get in touch today and let’s start building your project together.
+            </span>
+          </div>
+          <div ref={buttonRef} className=" flex justify-end">
+            <button className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105`}>
+              Know more
+            </button>
+          </div>
         </div>
-        </>
-    )
+      </div>
+    </div>
+  );
 }
