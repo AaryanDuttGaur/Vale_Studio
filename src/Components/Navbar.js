@@ -1,4 +1,4 @@
-'use client';
+"use client"
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Space_Grotesk, Bricolage_Grotesque } from "next/font/google";
@@ -69,15 +69,15 @@ export default function Navbar() {
               <Link href="/">Home</Link>
             </li>
             <li className={`${Space.className} p-2 hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white hover:text-black transition-all cursor-pointer`}>
-              <Link href="/About">About</Link>
+              <Link href="/Pages/About/">About</Link>
             </li>
             <li className={`${Space.className} p-2 hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white hover:text-black transition-all cursor-pointer`}>
-              <Link href="/Portfolio">Portfolio</Link>
+              <Link href="/Pages/Portfolio">Portfolio</Link>
             </li>
             <li
               className={`${Space.className} p-2 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-[#39322D] hover:bg-[#7952ED] hover:text-white cursor-pointer`}
             >
-              <Link href="/Contact">Contact</Link>
+              <Link href="  /Pages/Contact">Contact</Link>
             </li>
           </ul>
         </nav>
@@ -108,17 +108,17 @@ export default function Navbar() {
           <li
             className={`${Space.className} font-medium p-2 w-full text-white text-center hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] hover:text-black transition-all cursor-pointer`}
           >
-            <Link href="/About">About</Link>
+            <Link href="/Pages/About/">About</Link>
           </li>
           <li
             className={`${Space.className} font-medium p-2 w-full text-white text-center hover:bg-gradient-to-r from-[#D27DF3] to-[#7952ED] hover:text-black transition-all cursor-pointer`}
           >
-            <Link href="/Portfolio">Portfolio</Link>
+            <Link href="/Pages/Portfolio">Portfolio</Link>
           </li>
           <li
             className={`${Space.className} p-2 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white w-full text-center hover:text-black font-medium transition-all cursor-pointer`}
           >
-            <Link href="/Contact">Contact</Link>
+            <Link href="/Pages/Contact">Contact</Link>
           </li>
         </ul>
       </nav>
