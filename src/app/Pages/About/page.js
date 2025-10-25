@@ -21,7 +21,7 @@ export default function AboutPage() {
   const visionRef = useRef(null);
   const missionRef = useRef(null);
   const valuesRef = useRef([]);
-  const teamRef = useRef([]);
+  const servicesRef = useRef([]);
   const ctaSectionRef = useRef(null);
 
   useEffect(() => {
@@ -171,8 +171,8 @@ export default function AboutPage() {
       }
     });
 
-    // Team animation with stagger and parallax
-    teamRef.current.forEach((el, index) => {
+    // Services animation with stagger and parallax
+    servicesRef.current.forEach((el, index) => {
       if (el) {
         gsap.fromTo(
           el,
@@ -192,19 +192,16 @@ export default function AboutPage() {
           }
         );
 
-        // Individual parallax for team images
-        const img = el.querySelector('img');
-        if (img) {
-          gsap.to(img, {
-            y: -30,
-            scrollTrigger: {
-              trigger: el,
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 1,
-            },
-          });
-        }
+        // Individual parallax for service cards
+        gsap.to(el, {
+          y: -30,
+          scrollTrigger: {
+            trigger: el,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1,
+          },
+        });
       }
     });
 
@@ -228,42 +225,42 @@ export default function AboutPage() {
 
   const values = [
     {
-      title: "Innovation",
-      description: "We constantly push boundaries to create cutting-edge solutions that stand out.",
+      title: "Originality",
+      description: "Every project is approached with fresh eyes and unique creative solutions that stand out.",
       icon: "✨",
     },
     {
-      title: "Excellence",
-      description: "Quality is at the heart of everything we do, from concept to execution.",
+      title: "Quality",
+      description: "Meticulous attention to detail ensures every pixel, frame, and element serves a purpose.",
       icon: "🎯",
     },
     {
-      title: "Integrity",
-      description: "We build trust through transparency, honesty, and ethical practices.",
-      icon: "🤝",
+      title: "Storytelling",
+      description: "Visual narratives that connect emotionally and communicate meaningfully with audiences.",
+      icon: "📖",
     },
     {
-      title: "Creativity",
-      description: "Bold ideas and artistic vision drive our unique approach to design.",
-      icon: "🎨",
+      title: "Innovation",
+      description: "Embracing new techniques and technologies to push creative boundaries forward.",
+      icon: "🚀",
     },
   ];
 
-  const team = [
+  const services = [
     {
-      name: "Alex Rivera",
-      role: "Creative Director",
-      image: "/video/v8.jpg",
+      title: "Motion Graphics",
+      description: "Dynamic animations and visual effects that bring stories to life with energy and purpose.",
+      image: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=800&h=600&fit=crop",
     },
     {
-      name: "Sarah Chen",
-      role: "Lead Designer",
-      image: "/video/v9.jpg",
+      title: "Brand Visuals",
+      description: "Cohesive visual identities that capture brand essence and resonate with target audiences.",
+      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
     },
     {
-      name: "Marcus Johnson",
-      role: "Art Director",
-      image: "/video/v10.jpg",
+      title: "Art Direction",
+      description: "Strategic creative direction that ensures visual consistency and impactful communication.",
+      image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=600&fit=crop",
     },
   ];
 
@@ -277,22 +274,22 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="hero-badge inline-block mb-6">
             <span className={`${inter.className} text-xs uppercase tracking-[0.3em] text-[#D27DF3] font-light`}>
-              Our Story
+              About
             </span>
           </div>
           
-          <h1 className={`${Brico.className} text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight`}>
-            Crafting Digital{" "}
+          <h1 className={`${Brico.className} text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight`}>
+            Crafting Visual{" "}
             <span className="bg-gradient-to-r from-[#D27DF3] to-[#7952ED] bg-clip-text text-transparent">
-              Excellence
+              Stories
             </span>
           </h1>
           
           <div className="hero-divider w-24 h-1 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] mx-auto mb-8"></div>
           
-          <p className={`${inter.className} text-lg md:text-xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto`}>
-            We are a passionate team of designers, developers, and storytellers 
-            dedicated to transforming ideas into extraordinary digital experiences.
+          <p className={`${inter.className} text-base md:text-lg text-gray-300 font-light leading-relaxed max-w-2xl mx-auto`}>
+            A freelance visual designer and art director specializing in motion graphics, 
+            photography, and brand visuals. Creating impactful work that connects and inspires.
           </p>
         </div>
       </section>
@@ -301,24 +298,26 @@ export default function AboutPage() {
       <section className="px-8 md:px-20 py-20 bg-gradient-to-b from-[#0F0F0F] to-[#181717] relative">
         <div className="max-w-5xl mx-auto">
           <div ref={storyRef} className="space-y-8">
-            <h2 className={`${Brico.className} text-4xl md:text-5xl font-bold text-white mb-4`}>
-              Who We Are
+            <h2 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mb-4`}>
+              About Adrian
             </h2>
             
             <div className="w-16 h-1 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] mb-6"></div>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-5">
-                <p className={`${inter.className} text-base md:text-lg text-gray-300 font-light leading-relaxed`}>
-                  Founded with a vision to bridge creativity and technology, Vale Studio 
-                  has grown into a creative powerhouse that delivers impactful solutions 
-                  for brands worldwide.
+                <p className={`${inter.className} text-sm md:text-base text-gray-300 font-light leading-relaxed`}>
+                  Adrian Vale is a visual designer and art director based in London, UK, 
+                  specializing in motion graphics, photography, and brand visuals. With a 
+                  passion for storytelling through design, Adrian creates work that captures 
+                  attention and leaves a lasting impression.
                 </p>
                 
-                <p className={`${inter.className} text-base text-gray-400 font-light leading-relaxed`}>
-                  Our journey began with a simple belief: great design has the power to 
-                  inspire, engage, and transform. Today, we continue to push the boundaries 
-                  of what's possible in the digital realm.
+                <p className={`${inter.className} text-sm text-gray-400 font-light leading-relaxed`}>
+                  Working with creative agencies, production studios, and brands across Europe, 
+                  Adrian brings a unique blend of artistic vision and technical expertise to every 
+                  project. Each piece of work is crafted with intention, quality, and a commitment 
+                  to originality.
                 </p>
               </div>
               
@@ -326,8 +325,8 @@ export default function AboutPage() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-[#D27DF3]/20 to-[#7952ED]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <img
-                    src="/video/v8.jpg"
-                    alt="Vale Studio workspace"
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop"
+                    alt="Adrian Vale at work"
                     className="w-full h-[350px] object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -349,19 +348,19 @@ export default function AboutPage() {
               <div className="absolute -inset-2 bg-gradient-to-r from-[#D27DF3]/20 to-[#7952ED]/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               <div className="relative bg-[#1E1C1C] rounded-2xl p-8 border border-gray-800/50 hover:border-[#D27DF3]/30 transition-all duration-500">
                 <div className="w-14 h-14 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-3xl">👁️</span>
+                  <span className="text-3xl">💡</span>
                 </div>
                 
-                <h3 className={`${Brico.className} text-3xl font-bold text-white mb-4`}>
-                  Our Vision
+                <h3 className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-4`}>
+                  Creative Vision
                 </h3>
                 
                 <div className="w-12 h-1 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] mb-5"></div>
                 
-                <p className={`${inter.className} text-base text-gray-300 font-light leading-relaxed`}>
-                  To be the global leader in creative innovation, setting new standards 
-                  for digital excellence and inspiring the next generation of designers 
-                  and creators.
+                <p className={`${inter.className} text-sm md:text-base text-gray-300 font-light leading-relaxed`}>
+                  To create visual work that doesn't just look good, but tells meaningful 
+                  stories and creates emotional connections. Every project is an opportunity 
+                  to push creative boundaries and deliver something truly unique.
                 </p>
               </div>
             </div>
@@ -371,19 +370,19 @@ export default function AboutPage() {
               <div className="absolute -inset-2 bg-gradient-to-r from-[#7952ED]/20 to-[#D27DF3]/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               <div className="relative bg-[#1E1C1C] rounded-2xl p-8 border border-gray-800/50 hover:border-[#7952ED]/30 transition-all duration-500">
                 <div className="w-14 h-14 bg-gradient-to-r from-[#7952ED] to-[#D27DF3] rounded-lg flex items-center justify-center mb-6">
-                  <span className="text-3xl">🚀</span>
+                  <span className="text-3xl">🎯</span>
                 </div>
                 
-                <h3 className={`${Brico.className} text-3xl font-bold text-white mb-4`}>
-                  Our Mission
+                <h3 className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-4`}>
+                  The Approach
                 </h3>
                 
                 <div className="w-12 h-1 bg-gradient-to-r from-[#7952ED] to-[#D27DF3] mb-5"></div>
                 
-                <p className={`${inter.className} text-base text-gray-300 font-light leading-relaxed`}>
-                  To empower brands through exceptional design and strategic creativity, 
-                  delivering solutions that not only meet expectations but exceed them 
-                  in every possible way.
+                <p className={`${inter.className} text-sm md:text-base text-gray-300 font-light leading-relaxed`}>
+                  Combining artistic quality with strategic thinking. Each project starts with 
+                  understanding the story that needs to be told, then crafting visuals that 
+                  communicate it powerfully and authentically.
                 </p>
               </div>
             </div>
@@ -398,11 +397,11 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <span className={`${inter.className} text-xs uppercase tracking-[0.3em] text-[#D27DF3] font-light`}>
-              What Drives Us
+              Core Principles
             </span>
             
-            <h2 className={`${Brico.className} text-4xl md:text-5xl font-bold text-white mt-4 mb-6`}>
-              Our Core Values
+            <h2 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mt-4 mb-6`}>
+              What Drives The Work
             </h2>
             
             <div className="w-20 h-1 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] mx-auto"></div>
@@ -419,11 +418,11 @@ export default function AboutPage() {
                 <div className="relative bg-[#1E1C1C] rounded-xl p-7 border border-gray-800/50 hover:border-[#D27DF3]/30 transition-all duration-500 h-full">
                   <div className="text-4xl mb-5">{value.icon}</div>
                   
-                  <h4 className={`${Brico.className} text-2xl font-bold text-white mb-3`}>
+                  <h4 className={`${Brico.className} text-xl md:text-2xl font-bold text-white mb-3`}>
                     {value.title}
                   </h4>
                   
-                  <p className={`${inter.className} text-sm text-gray-400 font-light leading-relaxed`}>
+                  <p className={`${inter.className} text-xs md:text-sm text-gray-400 font-light leading-relaxed`}>
                     {value.description}
                   </p>
                 </div>
@@ -433,50 +432,51 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Services Section */}
       <section className="px-8 md:px-20 py-20 bg-gradient-to-b from-[#181717] to-[#0F0F0F]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <span className={`${inter.className} text-xs uppercase tracking-[0.3em] text-[#D27DF3] font-light`}>
-              Meet The Team
+              What I Do
             </span>
             
-            <h2 className={`${Brico.className} text-4xl md:text-5xl font-bold text-white mt-4 mb-6`}>
-              The Creative Minds
+            <h2 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mt-4 mb-6`}>
+              Creative Services
             </h2>
             
             <div className="w-20 h-1 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] mx-auto mb-6"></div>
             
-            <p className={`${inter.className} text-lg text-gray-300 font-light max-w-2xl mx-auto`}>
-              Talented individuals united by a passion for exceptional design and innovation.
+            <p className={`${inter.className} text-sm md:text-base text-gray-300 font-light max-w-2xl mx-auto`}>
+              Specialized expertise in motion design, brand visuals, and art direction for 
+              agencies, studios, and forward-thinking brands.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
+            {services.map((service, index) => (
               <div
                 key={index}
-                ref={(el) => (teamRef.current[index] = el)}
+                ref={(el) => (servicesRef.current[index] = el)}
                 className="group"
               >
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl mb-5">
                   <div className="absolute -inset-2 bg-gradient-to-r from-[#D27DF3]/30 to-[#7952ED]/30 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                   <div className="relative overflow-hidden rounded-2xl">
                     <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-[350px] object-cover transition-transform duration-700 group-hover:scale-110"
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-[280px] object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   </div>
                 </div>
                 
-                <h4 className={`${Brico.className} text-xl font-bold text-white mb-1`}>
-                  {member.name}
+                <h4 className={`${Brico.className} text-lg md:text-xl font-bold text-white mb-2`}>
+                  {service.title}
                 </h4>
                 
-                <p className={`${inter.className} text-sm text-[#D27DF3] font-light`}>
-                  {member.role}
+                <p className={`${inter.className} text-xs md:text-sm text-gray-400 font-light leading-relaxed`}>
+                  {service.description}
                 </p>
               </div>
             ))}
@@ -489,17 +489,17 @@ export default function AboutPage() {
         <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
         
         <div className="max-w-3xl mx-auto text-center relative z-10">
-          <h2 className={`${Brico.className} text-3xl md:text-5xl font-bold text-white mb-6 leading-tight`}>
-            Ready to Start Your{" "}
-            <span className="text-black">Journey?</span>
+          <h2 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mb-6 leading-tight`}>
+            Let's Create{" "}
+            <span className="text-black">Together</span>
           </h2>
           
-          <p className={`${inter.className} text-base md:text-lg text-white/90 font-light mb-8 max-w-xl mx-auto`}>
-            Let's collaborate and bring your vision to life with creativity, 
-            passion, and expertise.
+          <p className={`${inter.className} text-sm md:text-base text-white/90 font-light mb-8 max-w-xl mx-auto`}>
+            Ready to bring your visual story to life? Get in touch to discuss your 
+            next project and explore creative possibilities.
           </p>
           
-          <button className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 text-base`}>
+          <button className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 text-sm`}>
             Get In Touch
           </button>
         </div>

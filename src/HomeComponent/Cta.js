@@ -69,29 +69,38 @@ export default function Cta() {
         <div ref={boxref1} className="innerbox flex flex-col justify-stretch gap-5 ">
           <div className="Headings" ref={headingRef}>
             <h1
-              className={`${Space.className} text-white text-3xl md:text-5xl font-bold leading-tight drop-shadow-lg`}
+              className={`${Space.className} text-white text-2xl md:text-4xl font-bold leading-tight drop-shadow-lg`}
             >
-              Lets bring Your ideas to{" "}
-              <span className="text-black text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">
+              Let's bring your vision to{" "}
+              <span className="text-black text-3xl md:text-5xl font-bold leading-tight drop-shadow-lg">
                 Life
               </span>
             </h1>
-            <div className="w-20 h-1 bg-white "></div>
+            <div className="w-20 h-1 bg-white mt-4"></div>
           </div>
           <div
             ref={textRef}
-            className={`${inter.className} text-white text-sm md:text-lg font-extralight leading-snug drop-shadow-lg`}
+            className={`${inter.className} text-white text-sm md:text-base font-light leading-relaxed drop-shadow-lg max-w-3xl`}
           >
-            Ready to turn your vision into reality? Whether it’s a website, app, or a full digital experience, I’m here to help you craft something amazing.
+            Whether it's motion graphics that captivate, brand visuals that resonate, or art direction 
+            that tells your story—let's create something extraordinary together.
             <br />
             <br />
-            <span className="text-black">
-              Get in touch today and let’s start building your project together.
+            <span className="text-black font-normal">
+              Based in London and working with clients across the UK and Europe. Get in touch to discuss your next project.
             </span>
           </div>
-          <div ref={buttonRef} className=" flex justify-end">
-            <button className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105`}>
-              Know more
+          <div ref={buttonRef} className="flex justify-end">
+            <button 
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 text-sm`}
+            >
+              Get In Touch
             </button>
           </div>
         </div>

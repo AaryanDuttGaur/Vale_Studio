@@ -90,19 +90,19 @@ export default function Portfolio() {
         <div ref={titleRef} className="mb-20">
           <div className="inline-block mb-6">
             <span className={`${inter.className} text-sm uppercase tracking-[0.3em] text-white/90 font-light`}>
-              Our Work
+              Selected Work
             </span>
           </div>
 
-          <h1 className={`${Brico.className} text-6xl md:text-8xl font-bold leading-tight mb-6 text-white drop-shadow-lg`}>
-            Portfolio
+          <h1 className={`${Brico.className} text-5xl md:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-lg`}>
+            Featured Projects
           </h1>
 
           <div className="w-20 h-1 bg-white mb-8"></div>
 
-          <p className={`${inter.className} text-lg md:text-xl font-light text-white/90 leading-relaxed max-w-2xl mb-8`}>
-            At Estancia, we shape timeless spaces where furniture, form, and
-            interiors flow together in perfect harmony.
+          <p className={`${inter.className} text-base md:text-lg font-light text-white/90 leading-relaxed max-w-2xl mb-8`}>
+            A showcase of motion design, brand visuals, and art direction work 
+            created for agencies, studios, and brands across Europe.
           </p>
 
           <button 
@@ -112,7 +112,7 @@ export default function Portfolio() {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105`}
+            className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 text-sm`}
           >
             Get In Touch
           </button>
@@ -125,19 +125,19 @@ export default function Portfolio() {
           <div ref={project1Ref} className="group">
             <div className="relative overflow-hidden rounded-lg shadow-2xl h-[400px]">
               <img
-                src="/video/i2.jpg"
-                alt="Project 1"
+                src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=800&h=800&fit=crop"
+                alt="Motion Graphics Reel"
                 className="object-cover w-full h-full transition-all duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-700 group-hover:opacity-70"></div>
 
               {/* Project Info Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-8 transform transition-transform duration-500 group-hover:translate-y-0">
-                <h3 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mb-2`}>
-                  Modern Living
+                <h3 className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-2`}>
+                  Motion Graphics Reel
                 </h3>
                 <p className={`${inter.className} text-sm font-light text-gray-200 tracking-wide`}>
-                  Interior Design • 2024
+                  Motion Design • 2024
                 </p>
               </div>
             </div>
@@ -147,19 +147,19 @@ export default function Portfolio() {
           <div ref={project2Ref} className="group">
             <div className="relative overflow-hidden rounded-lg shadow-2xl h-[400px]">
               <img
-                src="/video/v8.jpg"
-                alt="Project 2"
+                src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=800&fit=crop"
+                alt="Brand Identity Design"
                 className="object-cover w-full h-full transition-all duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-700 group-hover:opacity-70"></div>
 
               {/* Project Info Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-8 transform transition-transform duration-500 group-hover:translate-y-0">
-                <h3 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mb-2`}>
-                  Workspace Design
+                <h3 className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-2`}>
+                  Brand Identity Design
                 </h3>
                 <p className={`${inter.className} text-sm font-light text-gray-200 tracking-wide`}>
-                  Commercial • 2024
+                  Branding • 2024
                 </p>
               </div>
             </div>
@@ -169,19 +169,19 @@ export default function Portfolio() {
           <div ref={project3Ref} className="group">
             <div className="relative overflow-hidden rounded-lg shadow-2xl h-[400px]">
               <img
-                src="/video/v9.jpg"
-                alt="Project 3"
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=800&fit=crop"
+                alt="Fashion Photography"
                 className="object-cover w-full h-full transition-all duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-700 group-hover:opacity-70"></div>
 
               {/* Project Info Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-8 transform transition-transform duration-500 group-hover:translate-y-0">
-                <h3 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mb-2`}>
-                  Creative Studio
+                <h3 className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-2`}>
+                  Fashion Editorial
                 </h3>
                 <p className={`${inter.className} text-sm font-light text-gray-200 tracking-wide`}>
-                  Workspace • 2024
+                  Photography • 2024
                 </p>
               </div>
             </div>
@@ -191,19 +191,19 @@ export default function Portfolio() {
           <div ref={project4Ref} className="group">
             <div className="relative overflow-hidden rounded-lg shadow-2xl h-[400px]">
               <img
-                src="/video/v10.jpg"
-                alt="Project 4"
+                src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&h=800&fit=crop"
+                alt="Product Launch Campaign"
                 className="object-cover w-full h-full transition-all duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-700 group-hover:opacity-70"></div>
 
               {/* Project Info Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-8 transform transition-transform duration-500 group-hover:translate-y-0">
-                <h3 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mb-2`}>
-                  Luxury Home
+                <h3 className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-2`}>
+                  Product Launch Campaign
                 </h3>
                 <p className={`${inter.className} text-sm font-light text-gray-200 tracking-wide`}>
-                  Residential • 2024
+                  Art Direction • 2023
                 </p>
               </div>
             </div>

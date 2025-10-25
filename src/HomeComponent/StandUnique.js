@@ -201,28 +201,27 @@ export default function StandUnique() {
       <div className="px-8 md:px-20 lg:px-20 pt-32 pb-16">
         <div ref={headerRef}>
           <h2
-            className={`${inter.className} text-sm uppercase tracking-[0.3em] text-[#D27DF3] font-light mb-6`}
+            className={`${inter.className} text-xs uppercase tracking-[0.3em] text-[#D27DF3] font-light mb-6`}
           >
-            Why Choose Us
+            Creative Approach
           </h2>
           <div className="bg-gradient-to-r from-[#D27DF3] to-[#7952ED] w-20 h-1 mb-8"></div>
           <h1
             className={`${Brico.className} text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight`}
           >
-            What Makes Us <br />
+            Design Philosophy <br />
             <span className="bg-gradient-to-r from-[#D27DF3] to-[#7952ED] bg-clip-text text-transparent">
-              Stand Out
+              & Process
             </span>
           </h1>
         </div>
 
         <div ref={introRef} className="max-w-2xl">
           <p
-            className={`${inter.className} text-lg md:text-xl text-gray-300 font-light leading-relaxed`}
+            className={`${inter.className} text-base md:text-lg text-gray-300 font-light leading-relaxed`}
           >
-            We combine innovative design thinking with cutting-edge technology
-            to deliver exceptional results that exceed expectations and inspire
-            lasting impact.
+            A unique blend of artistic vision and strategic thinking that transforms ideas 
+            into compelling visual narratives. Every project tells a story.
           </p>
         </div>
       </div>
@@ -235,21 +234,20 @@ export default function StandUnique() {
               <span
                 className={`${inter.className} text-xs uppercase tracking-[0.3em] text-[#D27DF3] font-light`}
               >
-                01 — Innovation
+                01 — Cinematic Vision
               </span>
             </div>
             <h3
-              className={`${Brico.className} text-2xl md:text-4xl font-bold text-white leading-tight`}
+              className={`${Brico.className} text-2xl md:text-3xl font-bold text-white leading-tight`}
             >
-              Cutting-Edge <br /> Creative Solutions
+              Motion That <br /> Moves People
             </h3>
             <p
-              className={`${inter.className} text-base md:text-lg text-gray-400 font-light leading-relaxed`}
+              className={`${inter.className} text-sm md:text-base text-gray-400 font-light leading-relaxed`}
             >
-              We push the boundaries of design and technology, crafting unique
-              experiences that captivate audiences and drive engagement. Our
-              innovative approach ensures your brand stands out in a crowded
-              digital landscape.
+              Every frame is crafted with intention. From smooth transitions to dynamic 
+              animations, creating motion graphics that don't just look good—they feel right. 
+              Visual storytelling that captures attention and holds it.
             </p>
             <div className="flex gap-4 pt-4">
               <div className="w-2 h-2 rounded-full bg-[#D27DF3] animate-pulse"></div>
@@ -262,8 +260,8 @@ export default function StandUnique() {
             <div className="absolute -inset-4 bg-gradient-to-r from-[#D27DF3]/20 to-[#7952ED]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="/video/v9.jpg"
-                alt="Innovation showcase"
+                src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=600&fit=crop"
+                alt="Motion design workspace"
                 className="w-full h-[350px] md:h-[450px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -279,8 +277,8 @@ export default function StandUnique() {
             <div className="absolute -inset-4 bg-gradient-to-r from-[#7952ED]/20 to-[#D27DF3]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="/video/v8.jpg"
-                alt="Quality craftsmanship"
+                src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=600&fit=crop"
+                alt="Brand design process"
                 className="w-full h-[350px] md:h-[450px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -292,21 +290,20 @@ export default function StandUnique() {
               <span
                 className={`${inter.className} text-xs uppercase tracking-[0.3em] text-[#D27DF3] font-light`}
               >
-                02 — Excellence
+                02 — Brand Identity
               </span>
             </div>
             <h3
-              className={`${Brico.className} text-3xl md:text-5xl font-bold text-white leading-tight`}
+              className={`${Brico.className} text-2xl md:text-3xl font-bold text-white leading-tight`}
             >
-              Uncompromising <br /> Quality Standards
+              Visuals That <br /> Define Brands
             </h3>
             <p
-              className={`${inter.className} text-base md:text-lg text-gray-400 font-light leading-relaxed`}
+              className={`${inter.className} text-sm md:text-base text-gray-400 font-light leading-relaxed`}
             >
-              Every project receives meticulous attention to detail and
-              refinement. We believe in delivering excellence at every stage,
-              from initial concept to final execution, ensuring results that
-              truly shine.
+              Building cohesive visual systems that authentically represent brand essence. 
+              From typography to color theory, every element works together to create memorable 
+              identities that resonate with target audiences and stand the test of time.
             </p>
             <div className="flex gap-4 pt-4">
               <div className="w-2 h-2 rounded-full bg-[#7952ED] animate-pulse"></div>
@@ -325,21 +322,20 @@ export default function StandUnique() {
               <span
                 className={`${inter.className} text-xs uppercase tracking-[0.3em] text-[#D27DF3] font-light`}
               >
-                03 — Partnership
+                03 — Art Direction
               </span>
             </div>
             <h3
-              className={`${Brico.className} text-3xl md:text-5xl font-bold text-white leading-tight`}
+              className={`${Brico.className} text-2xl md:text-3xl font-bold text-white leading-tight`}
             >
-              Collaborative <br /> Approach
+              Strategic Creative <br /> Leadership
             </h3>
             <p
-              className={`${inter.className} text-base md:text-lg text-gray-400 font-light leading-relaxed`}
+              className={`${inter.className} text-sm md:text-base text-gray-400 font-light leading-relaxed`}
             >
-              Your vision is our mission. We work closely with you throughout
-              the entire process, ensuring transparent communication and a
-              seamless partnership that brings your ideas to life with precision
-              and passion.
+              Guiding projects from initial concept through to final execution with a clear 
+              artistic vision. Combining strategic thinking with creative intuition to ensure 
+              every element serves the story and resonates with audiences on an emotional level.
             </p>
             <div className="flex gap-4 pt-4">
               <div className="w-2 h-2 rounded-full bg-[#D27DF3] animate-pulse"></div>
@@ -352,8 +348,8 @@ export default function StandUnique() {
             <div className="absolute -inset-4 bg-gradient-to-r from-[#D27DF3]/20 to-[#7952ED]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="/video/v10.jpg"
-                alt="Collaborative workspace"
+                src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&h=600&fit=crop"
+                alt="Creative art direction"
                 className="w-full h-[350px] md:h-[450px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>

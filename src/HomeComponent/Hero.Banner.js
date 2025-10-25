@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from 'react';
-import { Volume2, VolumeX } from 'lucide-react';
 
 export default function HeroBanner() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -129,9 +128,14 @@ export default function HeroBanner() {
                 aria-label={isMuted ? "Unmute" : "Mute"}
               >
                 {isMuted ? (
-                  <VolumeX className="w-4 h-4 text-white" />
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                  </svg>
                 ) : (
-                  <Volume2 className="w-4 h-4 text-white" />
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                  </svg>
                 )}
               </button>
             )}
@@ -140,11 +144,11 @@ export default function HeroBanner() {
 
         {/* Heading Over Video */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <h1 className="font-semibold text-5xl md:text-7xl lg:text-8xl mb-4 drop-shadow-2xl text-white">
-            Design in <span className="bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-transparent bg-clip-text">motion </span> and <span className="bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-transparent bg-clip-text">Stories</span> that move.
+          <h1 className="font-semibold text-4xl md:text-6xl lg:text-7xl mb-4 drop-shadow-2xl text-white">
+            Visuals in <span className="bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-transparent bg-clip-text">motion</span>, stories that <span className="bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-transparent bg-clip-text">resonate</span>
           </h1>
-          <p className="text-black text-lg md:text-xl lg:text-2xl font-light max-w-2xl drop-shadow-lg">
-            Crafting timeless experiences through motion, visual, and art design
+          <p className="text-white text-lg md:text-xl lg:text-2xl font-light max-w-2xl drop-shadow-lg">
+            Motion graphics, brand visuals, and art direction by Adrian Vale
           </p>
         </div>
       </div>

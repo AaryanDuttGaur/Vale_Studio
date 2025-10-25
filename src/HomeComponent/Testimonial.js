@@ -18,35 +18,35 @@ export default function Testimonial() {
 
   const testimonials = [
     {
-      name: "Sarah Mitchell",
-      role: "CEO, TechVision Inc.",
-      image: "/video/v8.jpg",
+      name: "James Whitaker",
+      role: "Creative Director, Vertex Studios",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
       quote:
-        "Working with Vale Studio transformed our brand identity completely. Their attention to detail and creative vision exceeded all our expectations. The team's professionalism and dedication made the entire process seamless.",
+        "Adrian's motion work elevated our brand campaign beyond expectations. His ability to translate abstract concepts into stunning visual narratives is exceptional. A true creative partner who delivers excellence every time.",
       rating: 5,
     },
     {
-      name: "Marcus Rodriguez",
-      role: "Creative Director, DesignHub",
-      image: "/video/v9.jpg",
+      name: "Sophie Laurent",
+      role: "Brand Manager, Lumière Agency",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
       quote:
-        "The level of creativity and innovation they bring to every project is unmatched. Vale Studio doesn't just deliver designs, they deliver experiences that resonate with audiences and drive real results.",
+        "Working with Vale Studio transformed our visual identity completely. Adrian's attention to detail and artistic vision brought our brand to life in ways we never imagined. Highly professional and incredibly talented.",
       rating: 5,
     },
     {
-      name: "Emily Chen",
-      role: "Founder, Bloom Interiors",
-      image: "/video/v10.jpg",
+      name: "Marcus Chen",
+      role: "Founder, TechFlow London",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
       quote:
-        "From concept to execution, Vale Studio demonstrated exceptional skill and artistry. They truly understood our vision and brought it to life in ways we couldn't have imagined. Highly recommend their services!",
+        "The photography and art direction Adrian provided for our product launch was nothing short of brilliant. His creative process is collaborative, efficient, and the results speak for themselves. Outstanding work.",
       rating: 5,
     },
     {
-      name: "David Thompson",
-      role: "Marketing Head, StartupX",
-      image: "/video/v8.jpg",
+      name: "Elena Rodriguez",
+      role: "Head of Marketing, Nexus Brands",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
       quote:
-        "Their collaborative approach and ability to translate ideas into stunning visuals is remarkable. Vale Studio has become an invaluable partner in our brand journey. Absolutely fantastic work!",
+        "Adrian's strategic approach to visual storytelling helped us connect with our audience on a deeper level. His motion graphics and brand visuals are consistently top-tier. An invaluable creative asset.",
       rating: 5,
     },
   ];
@@ -116,24 +116,24 @@ export default function Testimonial() {
         {/* Header Section */}
         <div ref={headerRef} className="text-center mb-20">
           <h2
-            className={`${inter.className} text-sm uppercase tracking-[0.3em] text-[#D27DF3] font-light mb-6`}
+            className={`${inter.className} text-xs uppercase tracking-[0.3em] text-[#D27DF3] font-light mb-6`}
           >
             Client Stories
           </h2>
           <div className="bg-gradient-to-r from-[#D27DF3] to-[#7952ED] w-20 h-1 mx-auto mb-8"></div>
           <h1
-            className={`${Brico.className} text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight`}
+            className={`${Brico.className} text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight`}
           >
-            What Our Clients{" "}
+            What Clients{" "}
             <span className="bg-gradient-to-r from-[#D27DF3] to-[#7952ED] bg-clip-text text-transparent">
               Say
             </span>
           </h1>
           <p
-            className={`${inter.className} text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto`}
+            className={`${inter.className} text-base md:text-lg text-gray-400 font-light max-w-2xl mx-auto`}
           >
-            Don't just take our word for it. Here's what our valued clients have
-            to say about their experience working with us.
+            Trusted by creative agencies, production studios, and forward-thinking brands 
+            across the UK and Europe.
           </p>
         </div>
 
@@ -163,7 +163,7 @@ export default function Testimonial() {
 
                 {/* Testimonial Text */}
                 <p
-                  className={`${inter.className} text-gray-300 text-base md:text-lg leading-relaxed mb-8 flex-grow`}
+                  className={`${inter.className} text-gray-300 text-sm md:text-base leading-relaxed mb-8 flex-grow`}
                 >
                   {testimonial.quote}
                 </p>
@@ -193,12 +193,12 @@ export default function Testimonial() {
                   </div>
                   <div>
                     <h4
-                      className={`${Space.className} text-white font-medium text-lg`}
+                      className={`${Space.className} text-white font-medium text-base`}
                     >
                       {testimonial.name}
                     </h4>
                     <p
-                      className={`${inter.className} text-gray-400 text-sm font-light`}
+                      className={`${inter.className} text-gray-400 text-xs font-light`}
                     >
                       {testimonial.role}
                     </p>
@@ -215,12 +215,18 @@ export default function Testimonial() {
         {/* Bottom CTA */}
         <div className="text-center mt-20">
           <p
-            className={`${inter.className} text-gray-400 text-lg mb-8 font-light`}
+            className={`${inter.className} text-gray-400 text-base mb-8 font-light`}
           >
-            Ready to create your success story?
+            Ready to bring your vision to life?
           </p>
           <button
-            className={`${Space.className} px-8 py-4 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white font-medium rounded-lg hover:shadow-xl hover:shadow-[#D27DF3]/20 transition-all duration-300 hover:scale-105`}
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className={`${Space.className} px-8 py-4 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white font-medium rounded-lg hover:shadow-xl hover:shadow-[#D27DF3]/20 transition-all duration-300 hover:scale-105 text-sm`}
           >
             Start Your Project
           </button>

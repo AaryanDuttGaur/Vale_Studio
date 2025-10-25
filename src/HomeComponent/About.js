@@ -101,8 +101,9 @@ export default function About() {
           className={`${Space.className} flex whitespace-nowrap gap-40 py-8 text-[1.2rem] md:text-[2.6rem] font-medium`}
         >
           <div className="banner-item">Motion Design</div>
-          <div className="banner-item">Visual Design</div>
-          <div className="banner-item">Art Design</div>
+          <div className="banner-item">Brand Visuals</div>
+          <div className="banner-item">Art Direction</div>
+          <div className="banner-item">Photography</div>
         </div>
       </div>
 
@@ -120,24 +121,24 @@ export default function About() {
               <div className="space-y-6">
                 <div className="inline-block">
                   <span className={`${inter.className} text-sm uppercase tracking-[0.3em] text-[#D27DF3] font-light`}>
-                    Who We Are
+                    About Adrian
                   </span>
                 </div>
                 
-                <h1 className={`${Brico.className} text-6xl md:text-7xl font-bold leading-tight`}>
-                  About Us
+                <h1 className={`${Brico.className} text-4xl md:text-5xl font-bold leading-tight`}>
+                  Visual Designer & Art Director
                 </h1>
                 
                 <div className="w-20 h-1 bg-gradient-to-r from-[#D27DF3] to-[#7952ED]"></div>
                 
-                <p className={`${inter.className} text-lg md:text-xl font-light text-gray-300 leading-relaxed max-w-lg`}>
-                  At Estancia, we shape timeless spaces where furniture, form, and
-                  interiors flow together in perfect harmony.
+                <p className={`${inter.className} text-base md:text-lg font-light text-gray-300 leading-relaxed max-w-lg`}>
+                  Based in London, UK, specializing in motion graphics, photography, and 
+                  brand visuals that tell compelling stories and create lasting impressions.
                 </p>
                 
-                <p className={`${inter.className} text-base font-light text-gray-400 leading-relaxed max-w-lg`}>
-                  Our design philosophy blends contemporary aesthetics with functional elegance, 
-                  creating environments that inspire and endure.
+                <p className={`${inter.className} text-sm md:text-base font-light text-gray-400 leading-relaxed max-w-lg`}>
+                  Working with creative agencies, production studios, and brands across Europe 
+                  to deliver work that combines artistic vision with strategic thinking.
                 </p>
               </div>
             </div>
@@ -149,19 +150,19 @@ export default function About() {
               <div ref={image1Ref} className="group">
                 <div className="relative overflow-hidden rounded-lg shadow-2xl">
                   <img
-                    src="/video/v8.jpg"
-                    alt="Designer at work"
+                    src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=800&h=600&fit=crop"
+                    alt="Motion design workspace"
                     className="object-cover w-full h-[320px] transition-all duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-700 group-hover:opacity-30"></div>
                   
                   {/* Stat Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-500 group-hover:translate-y-2">
-                    <h3 className={`${Brico.className} text-5xl font-bold text-white mb-1`}>
-                      20<span className="text-[#D27DF3]">+</span>
+                    <h3 className={`${Brico.className} text-4xl md:text-5xl font-bold text-white mb-1`}>
+                      80<span className="text-[#D27DF3]">+</span>
                     </h3>
-                    <p className={`${inter.className} text-sm font-light text-gray-200 tracking-wide uppercase`}>
-                      Happy Clients
+                    <p className={`${inter.className} text-xs md:text-sm font-light text-gray-200 tracking-wide uppercase`}>
+                      Projects Delivered
                     </p>
                   </div>
                 </div>
@@ -171,19 +172,19 @@ export default function About() {
               <div ref={image2Ref} className="group">
                 <div className="relative overflow-hidden rounded-lg shadow-2xl">
                   <img
-                    src="/video/v9.jpg"
-                    alt="Design workspace"
+                    src="https://images.unsplash.com/photo-1600132806608-231446b2e7af?w=800&h=600&fit=crop"
+                    alt="Brand design work"
                     className="object-cover w-full h-[320px] transition-all duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-700 group-hover:opacity-30"></div>
                   
                   {/* Stat Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-500 group-hover:translate-y-2">
-                    <h3 className={`${Brico.className} text-5xl font-bold text-white mb-1`}>
-                      50<span className="text-[#D27DF3]">+</span>
+                    <h3 className={`${Brico.className} text-4xl md:text-5xl font-bold text-white mb-1`}>
+                      35<span className="text-[#D27DF3]">+</span>
                     </h3>
-                    <p className={`${inter.className} text-sm font-light text-gray-200 tracking-wide uppercase`}>
-                      Projects Completed
+                    <p className={`${inter.className} text-xs md:text-sm font-light text-gray-200 tracking-wide uppercase`}>
+                      Happy Clients
                     </p>
                   </div>
                 </div>
@@ -193,18 +194,18 @@ export default function About() {
               <div ref={image3Ref} className="group">
                 <div className="relative overflow-hidden rounded-lg shadow-2xl">
                   <img
-                    src="/video/v10.jpg"
-                    alt="Creative process"
+                    src="https://images.unsplash.com/photo-1542744095-291d1f67b221?w=800&h=600&fit=crop"
+                    alt="Creative collaboration"
                     className="object-cover w-full h-[320px] transition-all duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-700 group-hover:opacity-30"></div>
                   
                   {/* Stat Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-500 group-hover:translate-y-2">
-                    <h3 className={`${Brico.className} text-5xl font-bold text-white mb-1`}>
-                      5<span className="text-[#D27DF3]">+</span>
+                    <h3 className={`${Brico.className} text-4xl md:text-5xl font-bold text-white mb-1`}>
+                      6<span className="text-[#D27DF3]">+</span>
                     </h3>
-                    <p className={`${inter.className} text-sm font-light text-gray-200 tracking-wide uppercase`}>
+                    <p className={`${inter.className} text-xs md:text-sm font-light text-gray-200 tracking-wide uppercase`}>
                       Years Experience
                     </p>
                   </div>

@@ -315,64 +315,64 @@ export default function PortfolioPage() {
     }
   }, []);
 
-  const filters = ["all", "branding", "web design", "ui/ux", "mobile"];
+  const filters = ["all", "motion", "branding", "photography"];
 
   const projects = [
     {
       id: 1,
-      title: "Luxe Fashion Brand",
-      category: "branding",
-      image: "/video/v1.jpg",
-      tags: ["Branding", "Identity"],
+      title: "Brand Motion Reel",
+      category: "motion",
+      image: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=800&h=800&fit=crop",
+      tags: ["Motion Design", "Animation"],
       year: "2024",
     },
     {
       id: 2,
-      title: "FinTech Dashboard",
-      category: "web design",
-      image: "/video/v2.jpg",
-      tags: ["Web Design", "UI/UX"],
+      title: "Tech Startup Identity",
+      category: "branding",
+      image: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=800&fit=crop",
+      tags: ["Branding", "Visual Identity"],
       year: "2024",
     },
     {
       id: 3,
-      title: "Wellness App",
-      category: "mobile",
-      image: "/video/v3.jpg",
-      tags: ["Mobile", "UI/UX"],
-      year: "2023",
+      title: "Fashion Editorial",
+      category: "photography",
+      image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=800&fit=crop",
+      tags: ["Photography", "Art Direction"],
+      year: "2024",
     },
     {
       id: 4,
-      title: "Restaurant Identity",
-      category: "branding",
-      image: "/video/v4.jpg",
-      tags: ["Branding", "Packaging"],
+      title: "Product Launch Video",
+      category: "motion",
+      image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=800&fit=crop",
+      tags: ["Motion Graphics", "Video"],
       year: "2023",
     },
     {
       id: 5,
-      title: "E-commerce Platform",
-      category: "ui/ux",
-      image: "/video/v5.jpg",
-      tags: ["UI/UX", "Web Design"],
-      year: "2024",
+      title: "Coffee Brand Rebrand",
+      category: "branding",
+      image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&h=800&fit=crop",
+      tags: ["Branding", "Packaging"],
+      year: "2023",
     },
     {
       id: 6,
-      title: "Travel Booking App",
-      category: "mobile",
-      image: "/video/v6.jpg",
-      tags: ["Mobile", "UI/UX"],
-      year: "2023",
+      title: "Architecture Series",
+      category: "photography",
+      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=800&fit=crop",
+      tags: ["Photography", "Visual Art"],
+      year: "2024",
     },
   ];
 
   const stats = [
-    { number: "150+", label: "Projects Completed" },
-    { number: "50+", label: "Happy Clients" },
-    { number: "12+", label: "Awards Won" },
-    { number: "8", label: "Years Experience" },
+    { number: "80+", label: "Projects Delivered" },
+    { number: "35+", label: "Happy Clients" },
+    { number: "6+", label: "Years Experience" },
+    { number: "4", label: "Countries Served" },
   ];
 
   const filteredProjects = activeFilter === "all" 
@@ -395,11 +395,11 @@ export default function PortfolioPage() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="hero-badge inline-block mb-6">
             <span className={`${inter.className} text-xs uppercase tracking-[0.3em] text-[#D27DF3] font-light`}>
-              Our Work
+              Selected Work
             </span>
           </div>
           
-          <h1 className={`${Brico.className} text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight`}>
+          <h1 className={`${Brico.className} text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight`}>
             Creative{" "}
             <span className="bg-gradient-to-r from-[#D27DF3] to-[#7952ED] bg-clip-text text-transparent">
               Portfolio
@@ -408,9 +408,9 @@ export default function PortfolioPage() {
           
           <div className="hero-divider w-24 h-1 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] mx-auto mb-8 origin-center"></div>
           
-          <p className={`${inter.className} text-lg md:text-xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto`}>
-            Explore our collection of innovative designs and digital experiences 
-            that have helped brands stand out and succeed.
+          <p className={`${inter.className} text-base md:text-lg text-gray-300 font-light leading-relaxed max-w-2xl mx-auto`}>
+            A curated collection of motion design, brand visuals, and photography work 
+            that tells stories and creates meaningful connections.
           </p>
         </div>
       </section>
@@ -456,7 +456,7 @@ export default function PortfolioPage() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-[400px] object-cover transition-all duration-700"
+                      className="w-full h-[380px] object-cover transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
                     
@@ -473,7 +473,7 @@ export default function PortfolioPage() {
                         ))}
                       </div>
                       
-                      <h3 className={`${Brico.className} text-2xl font-bold text-white mb-2`}>
+                      <h3 className={`${Brico.className} text-xl md:text-2xl font-bold text-white mb-2`}>
                         {project.title}
                       </h3>
                       
@@ -506,10 +506,10 @@ export default function PortfolioPage() {
         <div ref={featuredRef} className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <span className={`${inter.className} text-xs uppercase tracking-[0.3em] text-[#D27DF3] font-light`}>
-              Featured Work
+              Featured Project
             </span>
-            <h2 className={`${Brico.className} text-4xl md:text-5xl font-bold text-white mt-4`}>
-              Spotlight Project
+            <h2 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mt-4`}>
+              Spotlight Work
             </h2>
           </div>
 
@@ -518,7 +518,7 @@ export default function PortfolioPage() {
               <div className="absolute -inset-4 bg-gradient-to-r from-[#D27DF3]/20 to-[#7952ED]/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <img
-                  src="/video/v7.jpg"
+                  src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&h=1000&fit=crop"
                   alt="Featured Project"
                   className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -529,48 +529,44 @@ export default function PortfolioPage() {
             <div className="featured-content space-y-6">
               <div className="flex gap-3">
                 <span className={`${inter.className} text-xs px-4 py-2 bg-[#D27DF3]/20 rounded-full text-[#D27DF3] font-medium`}>
-                  Web Design
+                  Motion Design
                 </span>
                 <span className={`${inter.className} text-xs px-4 py-2 bg-[#7952ED]/20 rounded-full text-[#7952ED] font-medium`}>
                   Branding
                 </span>
               </div>
 
-              <h3 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white`}>
-                Tech Startup Rebrand
+              <h3 className={`${Brico.className} text-2xl md:text-3xl font-bold text-white`}>
+                Creative Agency Showreel
               </h3>
 
               <div className="w-16 h-1 bg-gradient-to-r from-[#D27DF3] to-[#7952ED]"></div>
 
-              <p className={`${inter.className} text-base text-gray-300 font-light leading-relaxed`}>
-                A comprehensive rebranding project for an innovative tech startup, 
-                including visual identity, website design, and marketing materials. 
-                The result was a modern, cohesive brand that resonated with their 
-                target audience and increased engagement by 150%.
+              <p className={`${inter.className} text-sm md:text-base text-gray-300 font-light leading-relaxed`}>
+                A dynamic motion graphics showreel created for a London-based creative agency. 
+                The project involved conceptualizing and executing a visually striking narrative 
+                that showcases the agency's diverse capabilities while maintaining a cohesive 
+                visual language throughout.
               </p>
 
               <div className="flex gap-6 pt-4">
                 <div>
-                  <div className={`${Brico.className} text-3xl font-bold text-white mb-1`}>
-                    150%
+                  <div className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-1`}>
+                    2:30
                   </div>
-                  <div className={`${inter.className} text-sm text-gray-400`}>
-                    Engagement Increase
+                  <div className={`${inter.className} text-xs md:text-sm text-gray-400`}>
+                    Duration
                   </div>
                 </div>
                 <div>
-                  <div className={`${Brico.className} text-3xl font-bold text-white mb-1`}>
-                    6 weeks
+                  <div className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-1`}>
+                    4 weeks
                   </div>
-                  <div className={`${inter.className} text-sm text-gray-400`}>
-                    Project Duration
+                  <div className={`${inter.className} text-xs md:text-sm text-gray-400`}>
+                    Timeline
                   </div>
                 </div>
               </div>
-
-              <button className={`${Space.className} mt-6 px-8 py-4 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-[#D27DF3]/30 transition-all duration-300 hover:scale-105`}>
-                View Case Study
-              </button>
             </div>
           </div>
         </div>
@@ -592,11 +588,11 @@ export default function PortfolioPage() {
               >
                 <div className="relative inline-block mb-4">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#D27DF3]/20 to-[#7952ED]/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                  <div className={`${Brico.className} relative text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#D27DF3] to-[#7952ED] bg-clip-text text-transparent`}>
+                  <div className={`${Brico.className} relative text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#D27DF3] to-[#7952ED] bg-clip-text text-transparent`}>
                     {stat.number}
                   </div>
                 </div>
-                <div className={`${inter.className} text-sm text-gray-400 font-light`}>
+                <div className={`${inter.className} text-xs md:text-sm text-gray-400 font-light`}>
                   {stat.label}
                 </div>
               </div>
@@ -611,22 +607,22 @@ export default function PortfolioPage() {
         <div ref={(el) => (floatingElementsRef.current[10] = el)} className="absolute bottom-20 left-20 w-40 h-40 border-2 border-white/20 rounded-lg rotate-12"></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className={`${Brico.className} text-3xl md:text-5xl font-bold text-white mb-6 leading-tight`}>
-            Have a Project{" "}
-            <span className="text-black">in Mind?</span>
+          <h2 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mb-6 leading-tight`}>
+            Like What You See?{" "}
+            <span className="text-black">Let's Collaborate</span>
           </h2>
           
-          <p className={`${inter.className} text-base md:text-lg text-white/90 font-light mb-8 max-w-2xl mx-auto`}>
-            Let's collaborate and create something extraordinary together. 
-            We're ready to bring your vision to life.
+          <p className={`${inter.className} text-sm md:text-base text-white/90 font-light mb-8 max-w-2xl mx-auto`}>
+            I'm always excited to work on new creative projects. Whether it's motion design, 
+            brand visuals, or art direction, let's create something amazing together.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105`}>
-              Start a Project
+            <button className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 text-sm`}>
+              Get In Touch
             </button>
-            <button className={`${Space.className} px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#7952ED] transition-all duration-300 hover:scale-105`}>
-              View All Work
+            <button className={`${Space.className} px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#7952ED] transition-all duration-300 hover:scale-105 text-sm`}>
+              Download Showreel
             </button>
           </div>
         </div>

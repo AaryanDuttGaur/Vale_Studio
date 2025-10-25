@@ -90,19 +90,19 @@ export default function Services() {
         <div ref={titleRef} className="mb-20">
           <div className="inline-block mb-6">
             <span className={`${inter.className} text-sm uppercase tracking-[0.3em] text-[#D27DF3] font-light`}>
-              What We Offer
+              What I Offer
             </span>
           </div>
 
-          <h1 className={`${Brico.className} text-6xl md:text-8xl font-bold leading-tight mb-6`}>
-            Our Services
+          <h1 className={`${Brico.className} text-5xl md:text-6xl font-bold leading-tight mb-6`}>
+            Creative Services
           </h1>
 
           <div className="w-20 h-1 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] mb-8"></div>
 
-          <p className={`${inter.className} text-lg md:text-xl font-light text-gray-300 leading-relaxed max-w-2xl mb-8`}>
-            From concept to completion, we deliver comprehensive design solutions
-            tailored to bring your vision to life.
+          <p className={`${inter.className} text-base md:text-lg font-light text-gray-300 leading-relaxed max-w-2xl mb-8`}>
+            Specialized expertise in motion graphics, brand visuals, and art direction 
+            for agencies, studios, and forward-thinking brands.
           </p>
 
           <button 
@@ -112,7 +112,7 @@ export default function Services() {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className={`${Space.className} px-8 py-4 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white font-medium rounded-lg hover:shadow-2xl hover:shadow-[#D27DF3]/50 transition-all duration-300 hover:scale-105`}
+            className={`${Space.className} px-8 py-4 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white font-medium rounded-lg hover:shadow-2xl hover:shadow-[#D27DF3]/50 transition-all duration-300 hover:scale-105 text-sm`}
           >
             Start a Project
           </button>
@@ -128,27 +128,28 @@ export default function Services() {
               
               <div className="relative z-10">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center bg-gradient-to-r from-[#D27DF3] to-[#7952ED] rounded-lg">
-                  <span className="text-3xl">🎨</span>
+                  <span className="text-3xl">🎬</span>
                 </div>
                 
-                <h3 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mb-4`}>
-                  Interior Design
+                <h3 className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-4`}>
+                  Motion Graphics
                 </h3>
                 
-                <p className={`${inter.className} text-base font-light text-gray-400 leading-relaxed mb-6`}>
-                  Creating harmonious living spaces that reflect your personality and lifestyle. 
-                  From modern minimalism to classic elegance, we craft interiors that inspire.
+                <p className={`${inter.className} text-sm md:text-base font-light text-gray-400 leading-relaxed mb-6`}>
+                  Dynamic animations and visual effects that bring stories to life. From brand 
+                  showreels to product videos, creating motion work that captures attention and 
+                  communicates powerfully.
                 </p>
 
-                <ul className={`${Space.className} space-y-2 text-sm text-gray-300`}>
+                <ul className={`${Space.className} space-y-2 text-xs md:text-sm text-gray-300`}>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> Space Planning
+                    <span className="text-[#D27DF3]">•</span> 2D/3D Animation
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> Color Consultation
+                    <span className="text-[#D27DF3]">•</span> Visual Effects
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> Material Selection
+                    <span className="text-[#D27DF3]">•</span> Explainer Videos
                   </li>
                 </ul>
               </div>
@@ -162,27 +163,27 @@ export default function Services() {
               
               <div className="relative z-10">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center bg-gradient-to-r from-[#D27DF3] to-[#7952ED] rounded-lg">
-                  <span className="text-3xl">🪑</span>
+                  <span className="text-3xl">🎨</span>
                 </div>
                 
-                <h3 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mb-4`}>
-                  Furniture Design
+                <h3 className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-4`}>
+                  Brand Visuals
                 </h3>
                 
-                <p className={`${inter.className} text-base font-light text-gray-400 leading-relaxed mb-6`}>
-                  Custom furniture pieces that blend form and function seamlessly. 
-                  Each piece is crafted to complement your space perfectly.
+                <p className={`${inter.className} text-sm md:text-base font-light text-gray-400 leading-relaxed mb-6`}>
+                  Cohesive visual identities that capture brand essence and resonate with target 
+                  audiences. From logo design to complete brand systems that make lasting impressions.
                 </p>
 
-                <ul className={`${Space.className} space-y-2 text-sm text-gray-300`}>
+                <ul className={`${Space.className} space-y-2 text-xs md:text-sm text-gray-300`}>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> Custom Pieces
+                    <span className="text-[#D27DF3]">•</span> Visual Identity
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> Prototype Development
+                    <span className="text-[#D27DF3]">•</span> Brand Guidelines
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> Production Oversight
+                    <span className="text-[#D27DF3]">•</span> Marketing Materials
                   </li>
                 </ul>
               </div>
@@ -196,27 +197,27 @@ export default function Services() {
               
               <div className="relative z-10">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center bg-gradient-to-r from-[#D27DF3] to-[#7952ED] rounded-lg">
-                  <span className="text-3xl">📐</span>
+                  <span className="text-3xl">🎯</span>
                 </div>
                 
-                <h3 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mb-4`}>
-                  Space Planning
+                <h3 className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-4`}>
+                  Art Direction
                 </h3>
                 
-                <p className={`${inter.className} text-base font-light text-gray-400 leading-relaxed mb-6`}>
-                  Optimizing your space for maximum functionality and aesthetic appeal. 
-                  Strategic layouts that enhance flow and usability.
+                <p className={`${inter.className} text-sm md:text-base font-light text-gray-400 leading-relaxed mb-6`}>
+                  Strategic creative direction that ensures visual consistency and impactful 
+                  communication. Guiding projects from concept to execution with artistic vision.
                 </p>
 
-                <ul className={`${Space.className} space-y-2 text-sm text-gray-300`}>
+                <ul className={`${Space.className} space-y-2 text-xs md:text-sm text-gray-300`}>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> Layout Design
+                    <span className="text-[#D27DF3]">•</span> Creative Concept
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> Traffic Flow Analysis
+                    <span className="text-[#D27DF3]">•</span> Visual Strategy
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> 3D Visualization
+                    <span className="text-[#D27DF3]">•</span> Campaign Design
                   </li>
                 </ul>
               </div>
@@ -230,27 +231,27 @@ export default function Services() {
               
               <div className="relative z-10">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center bg-gradient-to-r from-[#D27DF3] to-[#7952ED] rounded-lg">
-                  <span className="text-3xl">✨</span>
+                  <span className="text-3xl">📸</span>
                 </div>
                 
-                <h3 className={`${Brico.className} text-3xl md:text-4xl font-bold text-white mb-4`}>
-                  Styling & Decor
+                <h3 className={`${Brico.className} text-2xl md:text-3xl font-bold text-white mb-4`}>
+                  Photography
                 </h3>
                 
-                <p className={`${inter.className} text-base font-light text-gray-400 leading-relaxed mb-6`}>
-                  The finishing touches that bring your space to life. 
-                  Curated accessories, art, and decor elements that complete the vision.
+                <p className={`${inter.className} text-sm md:text-base font-light text-gray-400 leading-relaxed mb-6`}>
+                  Professional photography that tells visual stories. From editorial shoots to brand 
+                  campaigns, creating imagery that captures moments and conveys messages effectively.
                 </p>
 
-                <ul className={`${Space.className} space-y-2 text-sm text-gray-300`}>
+                <ul className={`${Space.className} space-y-2 text-xs md:text-sm text-gray-300`}>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> Art Selection
+                    <span className="text-[#D27DF3]">•</span> Editorial Photography
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> Accessory Curation
+                    <span className="text-[#D27DF3]">•</span> Brand Campaigns
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#D27DF3]">•</span> Final Staging
+                    <span className="text-[#D27DF3]">•</span> Creative Portraits
                   </li>
                 </ul>
               </div>
