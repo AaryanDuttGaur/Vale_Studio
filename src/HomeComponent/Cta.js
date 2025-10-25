@@ -3,6 +3,7 @@ import { Space_Grotesk, Bricolage_Grotesque, Inter } from "next/font/google";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,17 +92,13 @@ export default function Cta() {
             </span>
           </div>
           <div ref={buttonRef} className="flex justify-end">
-            <button 
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 text-sm`}
-            >
-              Get In Touch
-            </button>
+            <Link href="/Pages/Contact/">
+              <button 
+                className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 text-sm`}
+              >
+                Get In Touch
+              </button>
+            </Link>
           </div>
         </div>
       </div>

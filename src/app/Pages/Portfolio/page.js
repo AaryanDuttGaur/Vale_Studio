@@ -3,7 +3,7 @@ import { Space_Grotesk, Bricolage_Grotesque, Inter } from "next/font/google";
 import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 const Space = Space_Grotesk({ subsets: ["latin"] });
@@ -618,12 +618,11 @@ export default function PortfolioPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/Pages/Contact/">
             <button className={`${Space.className} px-8 py-4 bg-white text-[#7952ED] font-semibold rounded-lg hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 text-sm`}>
               Get In Touch
             </button>
-            <button className={`${Space.className} px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#7952ED] transition-all duration-300 hover:scale-105 text-sm`}>
-              Download Showreel
-            </button>
+            </Link>
           </div>
         </div>
       </section>

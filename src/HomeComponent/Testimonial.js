@@ -219,17 +219,6 @@ export default function Testimonial() {
           >
             Ready to bring your vision to life?
           </p>
-          <button
-            onClick={() => {
-              const contactSection = document.getElementById('contact');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className={`${Space.className} px-8 py-4 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white font-medium rounded-lg hover:shadow-xl hover:shadow-[#D27DF3]/20 transition-all duration-300 hover:scale-105 text-sm`}
-          >
-            Start Your Project
-          </button>
         </div>
       </div>
     </section>

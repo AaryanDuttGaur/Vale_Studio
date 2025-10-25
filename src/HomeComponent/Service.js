@@ -104,18 +104,6 @@ export default function Services() {
             Specialized expertise in motion graphics, brand visuals, and art direction 
             for agencies, studios, and forward-thinking brands.
           </p>
-
-          <button 
-            onClick={() => {
-              const contactSection = document.getElementById('contact');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className={`${Space.className} px-8 py-4 bg-gradient-to-r from-[#D27DF3] to-[#7952ED] text-white font-medium rounded-lg hover:shadow-2xl hover:shadow-[#D27DF3]/50 transition-all duration-300 hover:scale-105 text-sm`}
-          >
-            Start a Project
-          </button>
         </div>
 
         {/* Services Grid */}
